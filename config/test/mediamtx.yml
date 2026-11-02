@@ -1,0 +1,24 @@
+# MediaMTX for the end-to-end test (scripts/e2e-docker.sh). Every request is
+# authorised by the bridge's auth hook; nothing is anonymous.
+logLevel: warn
+api: yes
+apiAddress: 127.0.0.1:9997
+playback: yes
+playbackAddress: 127.0.0.1:9996
+rtspAddress: 127.0.0.1:8554
+rtpAddress: :18100
+rtcpAddress: :18101
+rtmp: no
+hls: no
+srt: no
+webrtcAddress: 127.0.0.1:8889
+authMethod: http
+authHTTPAddress: http://127.0.0.1:8440/auth
+authHTTPExclude: []
+pathDefaults:
+  recordPath: /recordings/%path/%Y-%m-%d_%H-%M-%S-%f
+  recordFormat: fmp4
+  recordPartDuration: 1s
+  recordSegmentDuration: 3s
+  recordDeleteAfter: 1h
+paths: {}

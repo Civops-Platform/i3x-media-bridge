@@ -1,0 +1,22 @@
+{
+  "name": "@civops/i3x-media-bridge",
+  "version": "1.0.0",
+  "description": "Live video and audio for CESMII i3X through MediaMTX: stream health as i3X values, signed per-stream viewer tokens, no publishing, and alarm-triggered clips",
+  "license": "MIT",
+  "author": "CivOps (https://civops.io)",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "keywords": ["i3x", "cesmii", "mediamtx", "rtsp", "webrtc", "video", "camera", "smart-manufacturing"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "bash scripts/e2e-docker.sh"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
